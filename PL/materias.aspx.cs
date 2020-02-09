@@ -31,7 +31,6 @@ namespace PL
                 {
                     var result = reader.AsDataSet();
 
-                    // Ejemplos de acceso a datos
                     DataTable table = result.Tables[0];
                     DataRow row = table.Rows[0];
                     string cell = row[0].ToString();
@@ -45,21 +44,13 @@ namespace PL
 
                         for (int j = 0; j < currentDataRow.Table.Columns.Count; j++)
                         {
-                            // Create a Cell (<td>)...
                             HtmlTableCell newCell = new HtmlTableCell();
 
-                            // Set some properties on the cell...
-                            //newCell.BackColor = System.Drawing.Color.White;
-                            //newCell.ForeColor = System.Drawing.Color.Black;
-
-                            // Add the text from the DataRow...
                             newCell.InnerText = currentDataRow[j].ToString();
 
-                            // Add the cell to the row...
                             newRow.Cells.Add(newCell);
                         }
 
-                        // Add the row to the table:
                         this.Table1.Rows.Add(newRow);
                     }
                 }
@@ -67,6 +58,27 @@ namespace PL
 
 
         }
-       
+        protected void ImportarSQL_Click(object sender, EventArgs e)
+        {
+            string filePath = "C:/Users/marich/Documents/Book1.xlsx";
+
+            using (var stream = File.Open(filePath, FileMode.Open, FileAccess.Read))
+            {
+                using (var reader = ExcelReaderFactory.CreateReader(stream))
+                {
+                    do
+                    {
+                        while (reader.Read())
+                        {
+                            reader.GetDouble(0);
+                        }
+                    } while (reader.NextResult());
+
+                }
+            }
+
+
+        }
+
     }
 }
