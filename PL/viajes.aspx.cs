@@ -38,7 +38,7 @@ namespace PL
             Document document = new Document();
             Section section = document.AddSection();
             
-            section.AddImage("C:/Users/marich/source/repos/Tarea III/PL/assets/images/top.jpg");
+            section.AddImage("/assets/images/top.jpg");
             section.AddParagraph("");
 
             section.AddParagraph("DATOS DEL VIAJERO", "Bold");
@@ -54,7 +54,7 @@ namespace PL
             section.AddParagraph("SALIDA: "+viaje.Salida+"           REGRESO: "+viaje.Regreso);
 
             section.AddParagraph("");
-            section.AddImage("C:/Users/marich/source/repos/Tarea III/PL/assets/images/top.jpg");
+            section.AddImage("/assets/images/top.jpg");
             
             PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(false, PdfFontEmbedding.Always);
             pdfRenderer.Document = document;
