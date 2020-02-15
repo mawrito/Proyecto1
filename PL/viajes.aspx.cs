@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using DAL.Viaje;
-using BLL.Palindromo;
-using System.Web.Services;
+﻿using DAL.Viaje;
 using MigraDoc.DocumentObjectModel;
 using MigraDoc.Rendering;
 using PdfSharp.Pdf;
-using System.Diagnostics;
+using System;
+using System.Web.UI;
+
 
 namespace PL
 {
@@ -22,30 +16,53 @@ namespace PL
         }
         protected void Comprar(object sender, EventArgs e)
         {
-            cls_Viaje_DAL viaje = new cls_Viaje_DAL();
+            Nuevo();
         }
 
+        protected void Nuevo()
+        {
+            cls_Viaje_DAL viaje = new cls_Viaje_DAL();
+            viaje.Origen = origen.Value;
+            viaje.Destino = destino.Value;
+            viaje.Salida = Convert.ToDateTime(salida.Value);
+            viaje.Regreso = Convert.ToDateTime(regreso.Value);
+            viaje.Nombre = "Mario Alberto";
+            viaje.Apellido = "Chaves Solano";
+            viaje.Asiento = 25;
+            viaje.Clase = 2;
 
-        protected void Imprimir(object sender, EventArgs e)
+            Imprimir(viaje);
+        }
+        protected void Imprimir(cls_Viaje_DAL viaje)
         {
             Document document = new Document();
-
             Section section = document.AddSection();
-            section.AddParagraph("Hello, World!");
-            section.AddParagraph();
+            
+            section.AddImage("C:/Users/marich/source/repos/Tarea III/PL/assets/images/top.jpg");
+            section.AddParagraph("");
 
-            Paragraph paragraph = section.AddParagraph();
-            paragraph.Format.Font.Color = Color.FromCmyk(100, 30, 20, 50);
-            paragraph.AddFormattedText("Hello, World!", TextFormat.Underline);
+            section.AddParagraph("DATOS DEL VIAJERO", "Bold");
+            section.AddParagraph("");
+            section.AddParagraph("NOMBRE COMPLETO: "+viaje.Nombre+" "+viaje.Apellido);
+            section.AddParagraph("ASIENTO: " + viaje.Asiento + "CLASE: " + viaje.Clase + " Economica");
+            section.AddParagraph("");
+            section.AddParagraph("");
+            
+            section.AddParagraph("DATOS DEL VIAJE","Bold");
+            section.AddParagraph("");
+            section.AddParagraph("ORIGEN: "+viaje.Origen+"           DESTINO: "+viaje.Destino);
+            section.AddParagraph("SALIDA: "+viaje.Salida+"           REGRESO: "+viaje.Regreso);
 
-            FormattedText ft = paragraph.AddFormattedText("Small text", TextFormat.Bold);
-            ft.Font.Size = 6;
-            PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(false,PdfFontEmbedding.Always);
+            section.AddParagraph("");
+            section.AddImage("C:/Users/marich/source/repos/Tarea III/PL/assets/images/top.jpg");
+            
+            PdfDocumentRenderer pdfRenderer = new PdfDocumentRenderer(false, PdfFontEmbedding.Always);
             pdfRenderer.Document = document;
             pdfRenderer.RenderDocument();
             string filename = "../../users/marich/desktop/HelloWorld.pdf";
             pdfRenderer.PdfDocument.Save(filename);
             
+
 
         }
     }

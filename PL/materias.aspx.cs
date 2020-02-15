@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using DAL.Palindromo;
-using BLL.Palindromo;
-using System.Web.Services;
-using System.IO;
-using ExcelDataReader;
+﻿using ExcelDataReader;
+using System;
 using System.Data;
+using System.IO;
+using System.Web.UI;
 using System.Web.UI.HtmlControls;
 
 namespace PL
@@ -40,7 +33,7 @@ namespace PL
                         DataRow currentDataRow = table.Rows[i];
 
                         HtmlTableRow newRow = new HtmlTableRow();
-                        
+
 
                         for (int j = 0; j < currentDataRow.Table.Columns.Count; j++)
                         {

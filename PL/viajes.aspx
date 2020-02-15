@@ -10,35 +10,35 @@
     <!--START INPUT-->
     <div class="jumbotron">
         <div class="row-cols-1">
-            <input id="Text1" type="text" runat="server" value="Origen:" style="display: inline-block; background-color: #282828; border: none; color: white; text-align: center; font-size: large; width: 25%; border-radius: 6px" />
+            <input  type="text"  value="Origen:" style="display: inline-block; background-color: #282828; border: none; color: white; text-align: center; font-size: large; width: 25%; border-radius: 6px" />
             <div class="form-group" style="display: inline-block;">
-                <select class="custom-select" style="text-align: center; font-size: large">
+                <select id="origen" runat="server" class="custom-select" style="text-align: center; font-size: large">
                     <option selected="">eliga un punto de salida</option>
-                    <option value="1">Alajuela</option>
-                    <option value="2">Liberia</option>
-                    <option value="3">Tibas</option>
+                    <option value="Alajuela">Alajuela</option>
+                    <option value="Liberia">Liberia</option>
+                    <option value="Tibas">Tibas</option>
                 </select>
             </div>
-            <input id="Text2" type="text" runat="server" value="Destino:" style="display: inline-block; background-color: #282828; border: none; color: white; text-align: center; font-size: large; width: 25%; border-radius: 6px" />
+            <input type="text"  value="Destino:" style="display: inline-block; background-color: #282828; border: none; color: white; text-align: center; font-size: large; width: 25%; border-radius: 6px" />
             <div class="form-group" style="display: inline-block;">
-                <select class="custom-select" style="text-align: center; font-size: large;width:250px">
+                <select id="destino" runat="server" class="custom-select" style="text-align: center; font-size: large;width:250px">
                     <option selected="">eliga un destino</option>
-                    <option value="1">Cancun</option>
-                    <option value="2">New York</option>
-                    <option value="3">Cairo</option>
-                    <option value="4">Bahamas</option>
-                    <option value="5">Galapagos</option>
+                    <option value="Cancun">Cancun</option>
+                    <option value="New York">New York</option>
+                    <option value="Cairo">Cairo</option>
+                    <option value="Bahamas">Bahamas</option>
+                    <option value="Galapagos">Galapagos</option>
                 </select>
             </div>
         </div>
         <div class="row-cols-1">
-            <input id="Text3" type="text" runat="server" value="Salida:" style="display: inline-block; background-color: #282828; border: none; color: white; text-align: center; font-size: large; width: 25%; border-radius: 6px" />
+            <input type="text" value="Salida:" style="display: inline-block; background-color: #282828; border: none; color: white; text-align: center; font-size: large; width: 25%; border-radius: 6px" />
             <div class="form-group" style="display: inline-block;">
-                <input type="date" id="start" name="trip-start"  min="2018-01-01" max="2018-12-31" style="text-align: center; font-size: large; border-radius: 6px;height:40px">
+                <input type="date" id="salida"  runat="server"  name="trip-start"   style="text-align: center; font-size: large; border-radius: 6px;height:40px">
             </div>
-            <input id="Text4" type="text" runat="server" value="Regreso:" style="display: inline-block; background-color: #282828; border: none; color: white; text-align: center; font-size: large; width: 25%; border-radius: 6px" />
+            <input type="text" value="Regreso:" style="display: inline-block; background-color: #282828; border: none; color: white; text-align: center; font-size: large; width: 25%; border-radius: 6px" />
             <div class="form-group" style="display: inline-block;">
-                <input type="date" id="start" name="trip-start"  min="2018-01-01" max="2018-12-31"style="text-align: center; font-size: large; border-radius: 6px;height:40px">
+                <input type="date" id="regreso" runat="server" name="trip-end"  style="text-align: center; font-size: large; border-radius: 6px;height:40px">
             </div>
         </div>
 

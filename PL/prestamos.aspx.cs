@@ -1,12 +1,11 @@
-﻿using System;
+﻿using BLL.Prestamo;
+using DAL.Prestamo;
+using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.IO;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using DAL.Prestamo;
-using BLL.Prestamo;
-using System.IO;
 
 namespace PL
 {
@@ -74,7 +73,7 @@ namespace PL
 
                     GridView1.DataSource = planPagos;
                     GridView1.DataBind();
-                    
+
                 }
                 else
                 {
@@ -157,11 +156,11 @@ namespace PL
             headOne.RenderControl(htmlTextWriter);
             tituloReporte.RenderControl(htmlTextWriter);
 
-            
+
             GridView1.Style["font-size"] = "medium";
             GridView1.Style["table-layout"] = "auto";
             GridView1.Style["width"] = "100%";
-            
+
 
 
 
@@ -248,7 +247,7 @@ namespace PL
             GridView1.DataBind();
             GridView1.RenderControl(htmlTextWriter);
             StringReader stringReader = new StringReader(stringWriter.ToString());
-           // Document pdfDoc = new HTMLWorker(pdfDoc);
+            // Document pdfDoc = new HTMLWorker(pdfDoc);
 
 
 

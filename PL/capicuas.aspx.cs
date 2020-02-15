@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using BLL.Palindromo;
 using DAL.Palindromo;
-using BLL.Palindromo;
+using System;
+using System.Web.UI;
 
 namespace PL
 {
@@ -14,7 +10,7 @@ namespace PL
         protected void Page_Load(object sender, EventArgs e)
         {
 
-           
+
         }
         protected void Validar_Click(object sender, EventArgs e)
         {

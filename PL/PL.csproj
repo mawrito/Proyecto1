@@ -158,6 +158,7 @@
     <Content Include="assets\images\m1.jpg" />
     <Content Include="assets\images\m2.jpg" />
     <Content Include="assets\images\m3.jpg" />
+    <Content Include="assets\images\top.jpg" />
     <Content Include="assets\images\wick.jpg" />
     <Content Include="assets\images\wick2.jpg" />
     <Content Include="assets\images\logo.png" />

@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
+﻿using BLL.Palindromo;
 using DAL.Palindromo;
-using BLL.Palindromo;
-using System.Web.Services;
+using System;
+using System.Web.UI;
 
 namespace PL
 {

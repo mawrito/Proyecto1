@@ -45,7 +45,11 @@
     <Compile Include="Prestamo\cls_Prestamo_BLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Cine\" />
+    <Folder Include="Materias\" />
+    <Folder Include="Viajes\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{5d482db5-e11e-4be7-93c6-28582178e63b}</Project>
