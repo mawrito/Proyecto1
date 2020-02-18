@@ -241,6 +241,7 @@
     <Content Include="package.json" />
     <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\Carpetadetrabajos-dev-as - Web Deploy.pubxml" />
+    <None Include="Properties\PublishProfiles\Grupo2 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\P1P4 - Web Deploy.pubxml" />
     <None Include="Properties\PublishProfiles\TareaIII - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
