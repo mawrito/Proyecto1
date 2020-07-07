@@ -5,7 +5,7 @@
     "fluentreports": "^1.2.8",
     "html2pdf.js": "^0.9.1",
     "install": "^0.13.0",
-    "npm": "^6.13.7",
+    "npm": "^6.14.6",
     "pdfkit": "^0.11.0"
   }
 }
